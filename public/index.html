@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venda de Imóveis - Sua Nova Casa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+
+    <!-- HERO SECTION (Topo da Página) -->
+    <section class="hero" id="inicio">
+        <div class="hero-content" data-aos="fade-up">
+            <div class="logo">
+                <img src="./logo1.png" alt="Imagem de Luxo 1">
+            </div>
+            
+            <div class="TitleLogo">
+            <img src="./logoTittle.png" alt="Imagem de Luxo 2">
+            </div>
+        </div>
+    </section>
+
+    <!-- LISTA DE IMÓVEIS + FORMULÁRIO -->
+    <section class="imoveis-contato">
+        <div class="imoveis">
+            <div class="descricao">
+                <img src="./cardes.png" alt="Título da Descrição">
+                <div class="descricao-text">
+                <p>Residências sofisticadas, localizadas no cenário mais exclusivo da Serra Gaúcha, com serviço hoteleiro de padrão internacional.</p>
+                <p>Um imóvel único, elaborado para quem deseja viver o melhor da região a partir da sua própria residência em Canela.</p>
+            </div>
+            </div>
+            <div class="grid">
+                <div class="card" >
+                    <img src="https://casaluxuosa.com.br/wp-content/uploads/2021/11/casa-luxuosa-goiania-o-que-podemos-chamar-imoveis-de-luxo.jpg" alt="Casa 1">
+                 
+                </div>
+                <div class="card"  data-aos-delay="200">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSenevQCUDDL1I_CmKHvSBUobjmqaCX70foCA&s" alt="Casa 2">
+                  
+                </div>
+            </div>
+        </div>
+
+        <div class="contato" id="contato">
+            <img src="./contato.png" alt="Título do Contato">
+            <form>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome"  required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+        
+                <label for="telefone">Telefone</label>
+                <div class="telefone-container" id="telefone-container">
+                    <!-- Quadrinho que exibe a bandeira do país selecionado -->  
+                
+                    <!-- Lista de países oculta -->
+                    <div id="lista-paises" class="dropdown-list">
+                        <div class="pais-item" data-bandeira="https://flagcdn.com/w40/br.png" data-ddd="+55">
+                            <img src="https://flagcdn.com/w40/br.png" alt="Brasil" class="bandeira">
+                            <span>Brasil (+55)</span>
+                        </div>
+                        <div class="pais-item" data-bandeira="https://flagcdn.com/w40/us.png" data-ddd="+1">
+                            <img src="https://flagcdn.com/w40/us.png" alt="EUA" class="bandeira">
+                            <span>Estados Unidos (+1)</span>
+                        </div>
+                        <div class="pais-item" data-bandeira="https://flagcdn.com/w40/gb.png" data-ddd="+44">
+                            <img src="https://flagcdn.com/w40/gb.png" alt="Reino Unido" class="bandeira">
+                            <span>Reino Unido (+44)</span>
+                        </div>
+                        <div class="pais-item" data-bandeira="https://flagcdn.com/w40/fr.png" data-ddd="+33">
+                            <img src="https://flagcdn.com/w40/fr.png" alt="França" class="bandeira">
+                            <span>França (+33)</span>
+                        </div>
+                        <div class="pais-item" data-bandeira="https://flagcdn.com/w40/in.png" data-ddd="+91">
+                            <img src="https://flagcdn.com/w40/in.png" alt="Índia" class="bandeira">
+                            <span>Índia (+91)</span>
+                        </div>
+                    </div>
+
+                    <div id="pais-selecionado" class="dropdown-trigger">
+                        <img id="icone-bandeira" src="https://flagcdn.com/w40/br.png" alt="Bandeira" class="bandeira">
+                        <span class="seta">▼</span>
+                    </div>
+                
+                    <!-- Campo de telefone -->
+                    <input type="tel" id="telefone" placeholder="+55" required>
+                </div>
+                
+                
+                <label for="cidade">Cidade:</label>
+                <div class="cidade-container">
+                    <input type="text" id="cidade" placeholder="Cidade *" required readonly>
+                    <span class="seta-cidade" id="abrir-cidades">▼</span>
+                    <ul id="lista-cidades" class="dropdown"></ul>
+                </div>
+        
+                <label for="estado">Estado</label>
+                <div class="estado-container">
+                    <input type="text" id="estado" placeholder="Estado" required readonly>
+                    <span class="seta-estado" id="abrir-estados">▼</span>
+                    <ul id="lista-estados" class="dropdown">
+                        <!-- Os estados serão adicionados dinamicamente aqui -->
+                    </ul>
+                </div>
+                
+        
+                <label for="captcha">10 + 8 = ?</label>
+                <input type="text" id="captcha" placeholder="Digite a resposta" required>
+        
+                <button type="submit">Quero saber mais</button>
+            </form>
+        </div>
+        
+    </section>
+
+    <section class="demonstracao">
+        <div class="imagens">
+            <img src="./demonstracao-img/imagem1.png" alt="Imagem 1">
+            <img src="./demonstracao-img/imagem2.png" alt="Imagem 2">
+            <img src="./demonstracao-img/imagem3.png" alt="Imagem 3">
+            <img src="./demonstracao-img/imagem4.png" alt="Imagem 4">
+        </div>
+    
+        <!-- Vídeo do YouTube -->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/vy0zV7_Vr1c?si=JZdMDjcqmUt-6gAL" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+
+    <section class="section-fundo-fixo">
+        <div class="conteudo">
+            <div class="logo_unico">
+                <img src="./logo-Unico.png" alt="">
+            </div>
+           <p>O Kempinski Laje de Pedra é a primeira operação na América do Sul da mais tradicional rede europeia de hotéis e residências, a Kempinski. </p>
+            <p>Um empreendimento moderno, com projeto arquitetônico desenvolvido pela Perkins & Will, que une sofisticação e integração à natureza local privilegiada pela vista mais exclusiva da região, para o Vale do Quilombo.</p>
+        </div>
+    </section>
+
+    <section class="nossas-estruturas">
+        <!-- Imagem Grande no topo -->
+        <img src="./conheca-estrutura-img/$zeozu6ja0ai.png" alt="Imagem Grande" class="imagem-grande">
+    
+        <!-- Imagem Menor com Título -->
+        <img src="./conheca-estrutura-img/$rooxr3u3718.png" alt="Título" class="titulo-imagem">
+    
+        <!-- 3 Colunas com textos -->
+        <div class="colunas">
+            <div class="coluna">
+                <h3>• Praça de convivência com cerca de 2.500 m²</h3>
+                <h3>• Spa com mais de 1.000 m²</h3>
+                <h3>• Wine bar</h3>
+            </div>
+            <div class="coluna">
+                <h3>• Fitness Center</h3>
+                <h3>• Salão de eventos, teatro e anfiteatro</h3>
+                <h3>• Floricultura e lojas de conveniência</h3>
+            </div>
+            <div class="coluna">
+                <h3>• 4 Piscinas, com vista para Vale do Quilombo e bosques - opções para adultos e crianças</h3>
+                <h3>• 9 operações gastronômicas</h3>
+                <h3>• Concierge para dicas, roteiros e passeios pelo destino</h3>
+            </div>
+        </div>
+
+        <!-- Seção com Cards de Estruturas -->
+<div class="estruturas-cards">
+    <div class="card">
+        <img src="./estruturas-cards/card1.png" alt="Card 1">
+    </div>
+    <div class="card">
+        <img src="./estruturas-cards/card2.png" alt="Card 2">
+    </div>
+    <div class="card">
+        <img src="./estruturas-cards/card3.png" alt="Card 3">
+    </div>
+    <div class="card">
+        <img src="./estruturas-cards/card4.png" alt="Card 4">
+    </div>
+    <div class="card">
+        <img src="./estruturas-cards/card5.png" alt="Card 5">
+    </div>
+    <div class="card">
+        <img src="./estruturas-cards/card6.png" alt="Card 6">
+    </div>
+
+
+    <div class="text-explica">
+        <p class="text-explica-p">
+            A excelência que a Kempinski confere aos seus empreendimentos é genuína e algo que começa muito antes da operação abrir suas portas.
+        </p>
+        <p class="text-explica-p">
+            As visitas técnicas periódicas fazem parte de todas as etapas pré e pós-inauguração do empreendimento e integram as políticas de qualidade e excelência da bandeira alemã.
+        </p>
+    </div>
+</div>
+
+<div class="video-contrucoes">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/FJz8HeW8sFg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+    </section>
+
+    <section class="imagem-fixa">
+        <div class="conteudo">
+            <div class="titulo-logoDemo">
+                <img src="./sobre-imagemDemo.png">
+            </div>
+            <div class="desci-lazer">
+           <p>Ao adquirir uma Kempinski Residence, você terá acesso a mais de 17mil mansões em mais de 110 países. </p>
+            <p>O Kempinski Laje de Pedra trouxe ao Brasil a THIRDHOME, o mais importante clube internacional de proprietários de imóveis de luxo, que permite a troca de um período no Kempinski Laje de Pedra por outro equivalente em uma das residências afiliadas.</p>
+          </div>
+        </div>
+    </section>
+    
+    
+    <section class="beneficios-proprietario">
+        <!-- Imagem do título -->
+        <img src="./beneficios-cliente.png" alt="Benefícios do Proprietário" class="titulo-imagem">
+    
+        <!-- Container das listas de benefícios -->
+        <div class="beneficios-container">
+            <div class="beneficio">
+                <h3>Apartamentos com sofisticação e padrão Kempinski</h3>
+                <p>Imóveis totalmente decorados e equipados com o conforto e comodidade das marcas mais prestigiadas do mundo e design de interiores assinado por Patricia Anastassiadis.</p>
+            </div>
+            
+            <div class="beneficio">
+                <h3>Possibilidade de utilizar a sua Kempinski Residence, em mais de 100 países</h3>
+                <p>Através de uma parceria exclusiva com a THIRDHOME, você tem a opção de trocar semanas de uso da sua Kempinski Residence por mais de 17.000 propriedades de luxo ao redor do mundo, incluindo outras redes de hotéis como Ritz e Four Seasons.</p>
+            </div>
+            
+            <div class="beneficio">
+                <h3>Membro Discovery Kempinski</h3>
+                <p>Ao adquirir uma Kempinski Residence, você terá direito a participar do GHA Discovery, com benefícios exclusivos em mais de 800 hotéis em mais de 100 países.</p>
+            </div>
+            
+            <div class="beneficio">
+                <h3>Liberdade para usufruir ou locar</h3>
+                <p>Você pode alugar seu apartamento. Toda gestão é realizada diretamente pela Kempinski, sem nenhuma preocupação, garantindo o padrão e valorização do seu imóvel.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="clientes-satisfeitos">
+        <!-- Imagem de detalhe no topo -->
+        <img src="./linha-horizontal.png" alt="Detalhe Linha" class="detalhe-linha">
+        
+        <!-- Imagem do título -->
+        <img src="./comentarios-clientes-title.png" alt="Título Clientes Satisfeitos" class="titulo-clientes">  
+
+        <div class="depoimento depoimento-invertido">
+            <div class="texto-depoimento">
+                <img src="./testemunha-incone.png">
+                <p>Além de ser um refúgio perfeito, é também uma oportunidade de investimento excepcional. A forte demanda turística da região e o padrão de excelência Kempinski garantem um retorno bem atraente. Adquirir uma unidade é mais do que um investimento imobiliário, é um investimento em um estilo de vida de classe mundial e em um ativo que promete valorização.</p>
+                <h4>Maria Oliveira</h4>
+            </div>
+            <img src="https://img.freepik.com/fotos-premium/natural-interior-felicidad-morena-informal_1301-2835.jpg" alt="Maria Oliveira" class="imagem-cliente">
+        </div>
+
+        <img src="./linha-horizontal.png" alt="Detalhe Linha" class="detalhe-linha">
+        
+        <div class="depoimento">
+            <div class="texto-depoimento">
+                <div class="testemunha-incones">
+                <img src="./testemunha-incone.png">
+            </div>
+                <p>"Fazer parte deste projeto é garantia de conquista de tempo de qualidade para mim e minha família, além de poder desfrutar dos serviços Kempinski sem precisar atravessar o oceano. Isso é um grande privilégio.</p>
+                <h4>João Silva</h4>
+            </div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjvZ5k6FcCNGs_cgpkDQRGkZjix3WVMO15vg&s" alt="João Silva" class="imagem-cliente">
+        </div>
+       
+    </section>
+
+    <section class="aquisicao-inteligente">
+       
+        <div class="conteudo">
+            <div class="aquisicao-title">
+                <img src="./aquisicao-inteligente.png">
+            </div>
+            <div class="aquisicao-text">
+            <p>As Kempinski Residences oferecem a possibilidade de compra compartilhada, que permite que você adquira um imóvel próprio, escriturado e herdável, de acordo com sua necessidade de uso. </p>
+        <p>Quando não utilizar todo o período que você adquiriu, poderá disponibilizar para locação. A Kempinski cuidará de toda a gestão praticando as mesmas tarifas do hotel.</p>
+    </div>
+    </div>
+    </section>
+    
+    <section class="sobre-nos">
+        <!-- Imagem do título -->
+        <img src="./obre-nos-img/titulo.png" alt="Título" class="titulo-imagem">
+    
+        <!-- Parágrafo de texto -->
+        <p class="descricao1">
+            O Kempinski Laje de Pedra está localizado nos Campos de Cima da Serra, em Canela/RS. Situado em cima de rocha sólida, o empreendimento integra a natureza em seu entorno, complementando a paisagem. <br><br>
+        </p>
+        <p class="descricao2">
+            Ao mesmo tempo, está a cinco minutos do Centro de Gramado, próximo à cidade, pontos turísticos e comerciais.
+        </p>
+
+        <!-- Imagem adicional -->
+        <img src="./obre-nos-img/rodape.png" alt="Imagem Sobre Nós" class="imagem-sobre-nos">
+    
+        <!-- Mapa (iframe do Google Maps) -->
+        <div class="mapa-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=EXEMPLO-DE-LINK" 
+                width="100%" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    
+        <!-- Botão -->
+        <div class="botao-container">
+            <button class="botao-contato">Converse com nossos especialistas</button>
+        </div>
+    </section>
+    
+    <section class="rodape">
+        <div class="botoes-container">
+            <button class="botao-rodape" id="ir-ao-inicio"><i class="fa-solid fa-chevron-up"></i> IR PARA O TOPO</button>
+            <button class="botao-rodape"><i class="fa-solid fa-globe"></i> Laje da pedra.com.br</button>
+        </div>
+    
+        <!-- Logo da empresa -->
+         <div class="logo-rodape">
+        <img src="./logo-rodape.png" alt="Luxor Estates" class="logo-rodape">
+    </div>
+
+        <!-- Texto de agradecimento e descrição -->
+        <p class="texto-rodape">
+            A <strong>Luxor Estates</strong> tem o prazer de oferecer imóveis de alto padrão para quem busca sofisticação e exclusividade.  
+            Cada projeto é pensado nos mínimos detalhes para proporcionar conforto, elegância e uma experiência única de moradia.  
+            Agradecemos a todos os nossos clientes por confiarem em nossa excelência e tradição no mercado imobiliário de luxo.  
+            Estamos comprometidos em entregar mais do que um imóvel: um verdadeiro lar dos sonhos.  
+        </p>
+        <br>
+        <p class="texto-rodape">
+            Na <strong>Luxor Estates</strong>, acreditamos que um imóvel de luxo vai muito além de paredes e fundações – ele representa um estilo de vida, uma extensão da personalidade e dos sonhos de seus proprietários. Nossos empreendimentos são cuidadosamente planejados para oferecer o equilíbrio perfeito entre sofisticação, conforto e inovação, sempre em localizações privilegiadas e com vistas deslumbrantes.  
+
+Cada detalhe, desde a escolha dos materiais nobres até a integração harmoniosa entre arquitetura e natureza, é pensado para criar ambientes que proporcionam bem-estar, exclusividade e uma experiência inigualável de moradia. Contamos com um time de especialistas que seleciona os melhores acabamentos, tecnologias de automação residencial e soluções sustentáveis para garantir que cada residência seja não apenas elegante, mas também eficiente e funcional.  
+
+Nosso compromisso é transformar sonhos em realidade, entregando lares que refletem o que há de mais refinado no mercado imobiliário. Com uma trajetória marcada pela excelência, inovação e atendimento impecável, seguimos firmes na missão de oferecer aos nossos clientes imóveis que superem expectativas e redefinam o conceito de viver bem.  
+
+Seja para morar, investir ou desfrutar de momentos inesquecíveis, a <strong>Luxor Estates</strong> está aqui para guiá-lo na jornada rumo ao lar perfeito. Obrigado por confiar em nosso trabalho. Seu futuro começa aqui!
+        </p>
+        <strong>atenção: esse é apenas um texto ilustrativo!</strong>
+    </section>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
