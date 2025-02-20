@@ -14,7 +14,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: url('https://homehub.com.br/blog/wp-content/uploads/2023/02/cyano_exclusive_residences_vista.jpg') center/cover no-repeat;  
+    background: url('./imagem-topo.webp') center/cover no-repeat;  
 }
 
 .hero-content {
@@ -149,7 +149,7 @@ body {
     align-items: center;
     gap: 5px;
     position: relative;
-    width: calc(100% + 19px); /* Compensando os 40px de padding da .contato */
+    width: 100%;/* Compensando os 40px de padding da .contato */
 }
 
 
@@ -220,7 +220,7 @@ body {
 /* Container do input de estado */
 .estado-container {
     position: relative;
-    width: calc(100% + 19px);
+    width: 100%;
     display: flex;
     align-items: center;
 }
@@ -275,16 +275,16 @@ body {
 /* Estilo do container da cidade */
 .cidade-container {
     position: relative;
-    width: calc(100% + 1px); /* Ou a largura que preferir */
+    width: 100%; /* Ou a largura que preferir */
     margin-bottom: 10px; /* Ajuste do espaçamento entre os campos */
 }
 
 
 /* Estilo do ícone da seta no input */
-.cidade-container .seta-cidade {
+ .seta-cidade {
     position: absolute;
     top: 50%;
-    right: -6px; 
+    right: 10px; 
     transform: translateY(-50%); 
     font-size: 16px;
     cursor: pointer;
@@ -348,15 +348,51 @@ body {
     .imoveis-contato {
         flex-direction: column;
         align-items: center;
+        padding: 60px 20px;
     }
 
     .imoveis, .contato {
         width: 100%;
+        padding: 10px 30px;
     }
 
     .contato button {
         width: 100%;
     }
+    .descricao-text {
+    padding: 0px 20px 0;
+}
+    
+    
+   .contato .cidade-container {
+    position: relative;
+    width: 100%; 
+   } 
+   .contato .cidade-container .seta-cidade {
+    position: absolute;
+    cursor: default;
+    top: 50%;
+    right: 2%; 
+    transform: translateY(-50%); 
+}
+
+.contato .telefone-container {
+    gap: 0px;
+    width: 100%; 
+}
+.imoveis-contato .contato .estado-container {
+    width: 100%;
+    
+}
+.contato.seta-estado {
+    position: absolute;
+
+    right: 2%;
+    cursor: default;
+    color: white;
+    font-size: 14px;
+}
+
 
 }
 
@@ -766,8 +802,18 @@ body {
     .imagem-cliente {
         margin-top: 10px;
     }
+    
 }
+@media (max-width: 768px) {
+    .aquisicao-inteligente .conteudo .aquisicao-title img {
+        width: 350px !important;
+    }
+    .aquisicao-inteligente .conteudo .aquisicao-text {
 
+    padding: 15px 40px;
+
+}
+}
 
 /* aquisição inteligente*/
 
@@ -867,7 +913,7 @@ body {
 
 .rodape {
     padding: 60px 20px;
-    background-color: #9c3922;
+    background-color: #B54C36;;
     text-align: center;
 }
 
@@ -909,4 +955,10 @@ body {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
 }
